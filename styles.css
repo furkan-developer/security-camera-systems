@@ -1,0 +1,203 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* BEGIN::header */
+
+/* BEGIN::header-top */
+.header-top {
+  background-color: #2d2c2a;
+  color: white;
+}
+.header-top__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+
+  & .phone-info {
+    color: white;
+
+    & svg {
+      color: white;
+      margin-right: 0.5rem;
+    }
+  }
+
+  & .social-media {
+    display: flex;
+
+    & span {
+      display: flex;
+      align-items: center;
+      margin: 0 0.1rem;
+      & i {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: rgb(#007aff, 0.5);
+      }
+    }
+  }
+}
+/* END::header-top */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  & .logo {
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2rem;
+
+    &::first-letter {
+      font-size: 2.5rem;
+    }
+  }
+
+  & .links {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: "Space Mono", monospace;
+
+    & span {
+      /* background-color: gray; */
+      padding: 0 0.5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.phone-info {
+  & .icon {
+    color: black;
+    font-size: 1.3rem;
+  }
+
+  & .text {
+    margin-right: 0.3rem;
+  }
+
+  & .tel {
+    color: #007aff;
+  }
+}
+/* END::header */
+
+/* BEGIN::hero */
+.hero {
+  height: 100vh;
+  background-image: url("images/hero.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adds a dark overlay for better readability */
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+/* END::hero */
+
+/* BEGIN::footer */
+footer {
+  background-color: #2d2c2a;
+  color: white;
+  & .footer-content {
+    display: flex;
+    padding: 3rem 0;
+    & > * {
+      flex-grow: 1;
+      padding: 0 3rem;
+    }
+
+    & > :first-child {
+      font-size: 2.5rem;
+      padding-left: 0;
+      /* background-color: pink; */
+    }
+
+    & .footer-contact {
+      /* background-color: red; */
+      line-height: 2.2rem;
+    
+      & p{
+        margin-bottom: 0.7rem;
+      }
+
+      & span {
+        margin-right: 0.5rem;
+      }
+    }
+
+    & .footer-social {
+      padding-right: 0;
+      /* flex-grow: 1; */
+      /* background-color: rebeccapurple; */
+
+      & i {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+/* END::footer */
